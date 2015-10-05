@@ -1,0 +1,34 @@
+<!-- this "_" on _header title indicates that it doesn't have a method associated with it
+and it expects to be called through a render command
+so that it can be displayed in every pages of the app for example.  -->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div>
+      <!-- Left-aligned
+    navbar-nav is left aligned by default -->
+      <ul class="nav navbar-nav">
+        <li><h1>My Rental App </h1> </li>
+      </ul>
+      <!-- right-aligned -->
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+<!--
+ul is a html command for unordered list which is opposed to “ol” ordered list
+li is the list item, it tells the code how many elements are in the list-->
+        <li> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> </li>
+
+        <% else %>
+
+        <li> <%= button_to "Sign In", new_user_session_path, class: "btn btn-success"  %> </li>
+
+      <li>  <%= button_to "Sign Up", new_user_registration_path, class: "btn btn-warning"  %> </li>
+
+        <%end %>
+
+      </ul>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>

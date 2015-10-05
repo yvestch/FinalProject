@@ -1,0 +1,12 @@
+<!--
+index shows the list of posts
+getboostrap grid system allows to create a side bar of a chosen column siza -->
+<div class="col-md-2 sidebar">
+<%= render 'saved_preferences/sidebar' %>
+</div>
+<div class="col-md-10">.
+<% @posts.all.each do |post| %>
+
+  <p> <span> <input type="checkbox"></input></span> <%= link_to post.title, post_path(post) %>   <!--<%= image_tag(post.image_url) %> --> </p>
+<% end %>
+</div>

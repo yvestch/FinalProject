@@ -1,0 +1,7 @@
+/*
+when you load a page, the browser reads only application.css, so those import commands allows application.css to use the styles defined below
+As you can see, the import corresponds to the title of the files in the stylesheets folder.
+*/
+@import "custom.css.scss";
+@import "post.scss";
+@import "saved_preferences.scss";

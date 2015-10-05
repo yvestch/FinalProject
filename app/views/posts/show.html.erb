@@ -1,0 +1,41 @@
+<!-- the  file name should match the method created in the controller
+-->
+
+<h1><%= @post.title %></h1>
+
+
+
+<p>
+  <strong>Date:</strong>
+<!--  SO: The attribute will be stored as a ActiveSupport::TimeWithZone, and you will have to format it when displaying it. You can use Time#strftime to do so.
+
+your_attribute.strftime("%m/%d/%Y")   #=> "11/19/2007"
+3. And what kind of form input should it have?
+
+Yes, you can perfectly use:
+
+f.date_field :date?
+It will return a text_field of type “date”. Depending on the browser support, a date picker will show up in the input field.
+-->
+  <%= @post.date %>
+  <strong>Location:</strong>
+  <%= @post.location %>
+  <strong>Price:</strong>
+  <%= @post.price %>
+  <strong>Email:</strong>
+  <%= @post.email %>
+</p>
+<p>
+  <!-- written like this, Rails doesn't know that it's an image_url
+
+-->
+  <%= image_tag(@post.image_url) %>
+
+
+</p>
+<p>
+<p><%=@post.description%> </p>
+</p>
+
+
+<%= link_to 'Back', posts_path %>

@@ -1,0 +1,30 @@
+<!--
+The file contains the html for all the pages
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CoolCL</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- The application.html file is rendered by every view
+as opposed to the home.html.erb which belongs to the static_page folder
+So this render command makes the 'layouts/header' visible in every page
+If i didn't put 'layouts' it would look for the '_header' in the
+render implicitly knows that it calls a partial , which is what '_header' is, as opposed to just 'header'
+ -->
+<%= render 'layouts/header' %>
+<!--
+this div is a bootstrap style to add margins -->
+<div class="container">
+<!-- this yield tells the page to render the html code in the views-->
+<%= yield %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- the span make the checkbox inline with the text -->
+
+<%= form_for @saved_preference do  |f| %>
+<%= f.check_box :location, { :multiple => true}, 'All SF Bay Area', nil %>
+<%= f.label 'All SF Bay Area' %>
+<br><%= f.check_box :location, { :multiple => true}, 'San Francisco', nil %>
+  <%= f.label 'San Francisco' %>
+</br>
+<%= f.check_box :location, { :multiple => true}, 'North Bay', nil %>
+<%= f.label 'North Bay' %>
+<br>
+<%= f.check_box :location, { :multiple => true}, 'East Bay', nil %>
+<%= f.label 'East Bay' %>
+</br>
+<%= f.check_box :location, { :multiple => true}, 'Peninsula', nil %>
+<%= f.label 'Peninsula' %>
+<br>
+<%= f.check_box :location, { :multiple => true}, 'Santa Cruz', nil %>
+<%= f.label 'Santa Cruz' %>
+</br>
+<%= f.check_box :location, { :multiple => true}, 'South Bay', nil %>
+<%= f.label 'South Bay' %>
+<%= f.hidden_field :user_id, value: current_user.id %>
+
+<br><%= f.submit %> </br>
+<% end %>

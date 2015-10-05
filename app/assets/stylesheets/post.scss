@@ -1,0 +1,9 @@
+// Place all the styles related to the Post controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.sidebar {
+// this code below creates a vertical line in css
+  border-right: 1px solid blue;
+  height:100%;
+  margin-left: -80px;
+}

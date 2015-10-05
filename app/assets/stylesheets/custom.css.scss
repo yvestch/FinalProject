@@ -1,0 +1,18 @@
+/*
+those are  by including the bootstrap gemfile 
+*/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/* this line of code is in css and forces the div to take  the whole height of the screen. it's 100% of its direct parent element.
+ */
+html, body {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+}
