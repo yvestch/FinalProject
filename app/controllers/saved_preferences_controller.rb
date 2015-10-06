@@ -1,7 +1,7 @@
 class SavedPreferencesController < ApplicationController
+  
+
   # the index allows me to view a list of saved_preferences on one page
-
-
   # the show allows me to view the details of every saved_preference
   # the "find param..." helps locate the saved_preference in the database by its ID
 
@@ -9,7 +9,6 @@ class SavedPreferencesController < ApplicationController
     def create
     #render plain: params[:saved_preference].inspect
     # to display the paramerters that are coming in the form
-
     #  @saved_preference = SavedPreference.new(params.require(:saved_preference).permit(:title, :text))
       @saved_preference = SavedPreference.new(saved_preferences_params)
       if saved_preferences_params[:location]

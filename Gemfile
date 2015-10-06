@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'pg'
+gem 'postgresql'
+
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-gem 'sqlite3'
+#gem 'sqlite3'
 
 #Front End Tools
 gem 'sass-rails', '~> 5.0'
@@ -29,15 +32,21 @@ group :development, :test do
   gem 'better_errors'
   gem 'annotate'
   gem 'spring'
+  gem 'sqlite3'
 end
+# bundle install --without production bundles everything except production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+  # this group is needed to deploy in Heroku
 
 =begin
 group :production do
   gem 'pg'
   gem 'rails_12factor'
   # this group is needed to deploy in Heroku
-
-
 end
 
 =end

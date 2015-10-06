@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 # the index allows me to view a list of posts on one page
   def index
     @posts = Post.all
+    binding.pry
     if current_user.saved_preference
       @saved_preference = current_user.saved_preference
     else
